@@ -1,14 +1,15 @@
 import React from "react";
 
-function Menu() {
+
+function Menu(prop) {
   return (
     <div className="menu item">
       <div className="ui toggle checkbox">
         <input
           type="checkbox"
           name="public"
-          checked={false}
-          onChange={() => console.log("toggle")}
+          checked={prop.darkMode}
+          onChange={() => prop.dmCallback(!prop.darkMode)}
         />
         <label>Toggle Dark Mode</label>
       </div>
